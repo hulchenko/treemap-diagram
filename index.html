@@ -5,26 +5,101 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.6.2/d3.min.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <link rel="stylesheet" href="./style.css" />
     <title id="title">Treemap Diagram</title>
   </head>
   <body>
+    <small>Legend:</small>
+    <svg id="legend">
+      <g>
+        <rect
+          class="legend-item"
+          x="10"
+          y="0"
+          width="40"
+          height="40"
+          fill="#e41c38"
+        ></rect>
+        <text x="60" y="20" fill="#e41c38">Action</text>
+      </g>
+      <g>
+        <rect
+          class="legend-item"
+          x="10"
+          y="40"
+          width="40"
+          height="40"
+          fill="#87A96B"
+        ></rect>
+        <text x="60" y="60" fill="#87A96B">Adventure</text>
+      </g>
+      <g>
+        <rect
+          class="legend-item"
+          x="10"
+          y="80"
+          width="40"
+          height="40"
+          fill="lightblue"
+        ></rect>
+        <text x="60" y="100" fill="lightblue">Animation</text>
+      </g>
+      <g>
+        <rect
+          class="legend-item"
+          x="10"
+          y="120"
+          width="40"
+          height="40"
+          fill="blue"
+        ></rect>
+        <text x="60" y="140" fill="blue">Biography</text>
+      </g>
+      <g>
+        <rect
+          class="legend-item"
+          x="10"
+          y="160"
+          width="40"
+          height="40"
+          fill="orange"
+        ></rect>
+        <text x="60" y="180" fill="orange">Comedy</text>
+      </g>
+      <g>
+        <rect
+          class="legend-item"
+          x="10"
+          y="200"
+          width="40"
+          height="40"
+          fill="grey"
+        ></rect>
+        <text x="60" y="220" fill="grey">Drama</text>
+      </g>
+      <g>
+        <rect
+          class="legend-item"
+          x="10"
+          y="240"
+          width="40"
+          height="40"
+          fill="yellow"
+        ></rect>
+        <text x="60" y="260" fill="#FFD700">Family</text>
+      </g>
+    </svg>
     <div class="main">
-      <h1>Video Game Sales</h1>
-      <h3 id="description">
-        Top 100 Most Sold Video Games Grouped by Platform
-      </h3>
+      <h1>Top Movie Sales</h1>
+      <h3 id="description">Top 100 Most Sold Movies Grouped by Platform</h3>
       <div id="tooltip">
         <p>
+          <b>$</b><br />
           <b>Name: </b><br />
-          <b>Category: </b><br />
-          <b>Value: </b>
         </p>
       </div>
-      <small>Legend:</small>
-      <div id="legend"></div>
+      <svg id="canvas"></svg>
     </div>
-    <script type="text/babel" src="./script.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>

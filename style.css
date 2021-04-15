@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 html {
   height: 100vh;
+}
+
+#canvas {
+  width: 1000px;
+  height: 600px;
 }
 
 body {
@@ -11,4 +17,27 @@ body {
 .main {
   display: flex;
   flex-direction: column;
+}
+
+h1,
+h3 {
+  font-family: 'Roboto Mono', monospace;
+  text-align: center;
+}
+
+#legend {
+  height: 300px;
+}
+
+.tile:hover {
+  fill: red;
+}
+
+text {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.7rem;
+}
+
+#tooltip {
+  font-family: 'Roboto Mono', monospace;
 }
